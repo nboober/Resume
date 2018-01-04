@@ -1,3 +1,7 @@
+@import "placeholders.scss";
+@import "variables";
+@import "mixins";
+
 *{
     margin: 0;
     padding: 0;
@@ -9,7 +13,7 @@ html{
 .name {
     text-align: center;
     margin: 20px 0;
-    min-width: 172px;
+    min-width: 323px;
     font-size: 5rem;
 }
 
@@ -20,18 +24,39 @@ html{
     border-bottom: 2px solid black;
     padding: 7px 0;
     width: 80%;
-    min-width: 263px;
+    @extend %stretch-limits;
     margin: 0 auto;
     
     li{
      display: inline-block;
      font-size: 2.5rem;
+     
      img{
         margin-right: 5px;
-     }
+        }
     }
 }
 
 .left{
     margin-left: 10px;
+}
+
+.objective, .summary, .education{
+    @extend %center-main-blocks;
+    @extend %stretch-limits;
+}
+
+h3{
+    font-size: 3rem;
+    padding: 7px 0;
+}
+
+p{
+    font-size: 2rem;
+}
+
+li{
+    font-size: 2rem;
+    margin-left: 25px;
+    padding: 3px 0;
 }
