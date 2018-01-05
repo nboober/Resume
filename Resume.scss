@@ -41,7 +41,7 @@ html{
     margin-left: 10px;
 }
 
-.objective, .summary, .education{
+.objective, .summary, .education, .exp {
     @extend %center-main-blocks;
     @extend %stretch-limits;
 }
@@ -49,6 +49,10 @@ html{
 h3{
     font-size: 3rem;
     padding: 7px 0;
+}
+
+#newExp{
+    width: 500px;
 }
 
 p{
