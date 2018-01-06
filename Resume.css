@@ -1,8 +1,8 @@
-.contact, .objective, .summary, .education, .exp {
+.contact, .objective, .summary, .education, .exp, .references, .hobbies {
   max-width: 1301px;
   min-width: 461px; }
 
-.objective, .summary, .education, .exp {
+.objective, .summary, .education, .exp, .references, .hobbies {
   margin: 20px auto;
   width: 80%; }
 
@@ -39,7 +39,7 @@ h3 {
   font-size: 3rem;
   padding: 7px 0; }
 
-#expEntry {
+#expEntry, #refEntry {
   width: 500px; }
 
 p {

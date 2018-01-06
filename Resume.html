@@ -46,6 +46,7 @@
 <div class="exp">
     <h3>Experience</h3>
     
+    <input type="button" value="View Experience" id="viewExp" onclick="showExp()"/>
     <input type="button" value="Add Experience" id="showExp" onclick="showHide()"/></br>                                                <!-- Button shows and hides expEntry box-->
     <div style="visibility: hidden;" id="newExp"><input  type="text" placeholder="Enter New Experience Here..." id="expEntry"/>         <!-- Data Entry Box. Enter elements to add to an array-->
     <input type="button" value="Submit" onclick="addExp()"</input>                                                                      <!-- Submit the data entered into the Data Entry Box to the array-->
@@ -53,26 +54,81 @@
     
     <script type="text/javascript" language="javascript">
         
-    let experience = ["1", "2"];
+    let experience = ["Novavax – Rockville, MD | Pharmaceutical Company | Accounting and Facilities Assistant (Temp Assignment), April 18, 2016 – Present | Creating SOP and Work Instructions for Blue Mountains Asset Manager | Validation with Writing PQ Test Cases for Blue Mountain Work Instruction and SOP’s | Assisting with testing and setup of Blue Mountain’s Asset Manager for transition from paper base to electronic base work system. | Management of Various Documents | Data Entry | Maintaining Filing System | Creating/ Completing Corrective Maintenance Forms | Initiating Equipment and Completing the Appropriate Initiation Form"];
     
-    for(let experienceIndex = 0; experienceIndex < experience.length; experienceIndex++)
-            {document.write(experience[experienceIndex] + "</br>");
-            console.log(experience[experienceIndex]);
-            }
     const addExp = () => {
         
         experience.push(document.getElementById('expEntry').value);
-        console.log("element added");
+        console.log("Experience added");
         console.log(experience);
+        document.write("<h2>Experience</h2>");
         
+        for(let experienceIndex = 0; experienceIndex < experience.length; experienceIndex++)
+            {document.write(experience[experienceIndex] + "</br>" + "</br>");
+            console.log("Experience:" + " " + experience[experienceIndex]);
+            }
         
         };
+    
+    
+    const showExp = () => {
+        document.write("<h2>Experience</h2>");
+        
+        for (let experienceIndex = 0; experienceIndex < experience.length; experienceIndex++){
+            document.write(experience[experienceIndex] + "</br>" + "</br>");
+            console.log("Experience:" + " " + experience[experienceIndex]);
+        }
+    };
     
 </script>
     
 </div>
 
+<div class="references">
+    <h3>References</h3>
+    
+    <input type="button" value="View References" id="viewRef" onclick="showRef()"/>
+    <input type="button" value="Add References" id="showExp" onclick="showHideRef()"/></br>
+    <div style="visibility: hidden;" id="newRef"><input type="text" placeholder="Add Reference Here..." id="refEntry"/>
+    <input type="button" value="Submit" onclick="addRef()"/></div>
+    
+    
+    <script language="javascript" type="text/javascript">
+        
+        let references = ["Dustin Berghers – Manager, Facilities | Email: dberghers@novavax.com | 240/ 268-2045","Cynthia Utley – Director of Facilities | Email: cutley@novavax.com | 240-268-2014"];
+        
+        const addRef = () =>{
+            references.push(document.getElementById('refEntry').value);
+            console.log("Reference Added");
+            
+            document.write("<h2>References</h2>");
+            
+            for (let referenceIndex = 0; referenceIndex < references.length; referenceIndex++){
+                console.log("Reference:" + " " + references[referenceIndex]);
+                document.write(references[referenceIndex] + "</br>" + "</br>");
+            }
+        };
+        
+        const showRef = () =>{
+            document.write("<h2>References</h2>");
+            
+            for (let referenceIndex = 0; referenceIndex < references.length; referenceIndex++){
+                console.log("Reference:" + " " + references[referenceIndex]);
+                document.write(references[referenceIndex] + "</br>" + "</br>");
+            }
+        };
+        
+    </script>
+</div>
 
+<div class="hobbies">
+    <h3>Hobbies</h3>
+    <ul>
+        <li><strong>2 Years Working on computers:</strong></li>
+        <li style="list-style-type: circle">Installed CPUs, upgraded BIOS, installed Graphics cards, installed hard drives, installed Power supplies</li>
+    </ul>
+    
+</div>
 
 </body>
 </html>

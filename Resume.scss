@@ -41,7 +41,7 @@ html{
     margin-left: 10px;
 }
 
-.objective, .summary, .education, .exp {
+.objective, .summary, .education, .exp, .references, .hobbies{
     @extend %center-main-blocks;
     @extend %stretch-limits;
 }
@@ -51,7 +51,7 @@ h3{
     padding: 7px 0;
 }
 
-#expEntry{
+#expEntry, #refEntry{
     width: 500px;
 }
 
