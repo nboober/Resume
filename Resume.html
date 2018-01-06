@@ -46,9 +46,33 @@
 <div class="exp">
     <h3>Experience</h3>
     
-    <input type="button" value="Add Experience" id="showExp" onclick="showHide()"/>
-    <input style="visibility: hidden;" type="text" placeholder="Enter New Experience Here..." id="newExp"/>
+    <input type="button" value="Add Experience" id="showExp" onclick="showHide()"/></br>                                                <!-- Button shows and hides expEntry box-->
+    <div style="visibility: hidden;" id="newExp"><input  type="text" placeholder="Enter New Experience Here..." id="expEntry"/>         <!-- Data Entry Box. Enter elements to add to an array-->
+    <input type="button" value="Submit" onclick="addExp()"</input>                                                                      <!-- Submit the data entered into the Data Entry Box to the array-->
+    </div>
+    
+    <script type="text/javascript" language="javascript">
+        
+    let experience = ["1", "2"];
+    
+    for(let experienceIndex = 0; experienceIndex < experience.length; experienceIndex++)
+            {document.write(experience[experienceIndex] + "</br>");
+            console.log(experience[experienceIndex]);
+            }
+    const addExp = () => {
+        
+        experience.push(document.getElementById('expEntry').value);
+        console.log("element added");
+        console.log(experience);
+        
+        
+        };
+    
+</script>
+    
 </div>
+
+
 
 </body>
 </html>
